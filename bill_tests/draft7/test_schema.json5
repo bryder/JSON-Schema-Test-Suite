@@ -1,0 +1,15 @@
+{
+  // from properties.json
+  "description": "properties, patternProperties, additionalProperties interaction",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "foo": {"type": "array", "maxItems": 3},
+    "bar": {"type": "array"}
+  },
+  // Note - "minItems": 2 will match a string or integer etc.
+  // it will only check minItems if it's an array
+  "patternProperties": {"f.o": {"minItems": 2}},
+  "additionalProperties": {"type": "integer"}
+
+}

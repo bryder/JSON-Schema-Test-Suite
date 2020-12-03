@@ -1,0 +1,5 @@
+{
+  "fxo": 1, // valid because it is an integer - f.o minItems does not pick it because is not an array
+  "fyo": [], // invalid because it is an array with < 2 items
+  "foo": [], // invalid because it is an array < 2 items - even though it matches properties
+}
